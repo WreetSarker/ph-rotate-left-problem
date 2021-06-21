@@ -1,23 +1,21 @@
 function rotateLeft(n, d, arr) {
-    let size = n;
-    let newArr = [];
-    let rotateLeftIdx = d;
+    let finalArr = [];
+    let rotationIdx = d;
 
     let i = 0;
-    while (rotateLeftIdx < size) {
-        newArr[i] = arr[rotateLeftIdx];
+    while (rotationIdx < n) {
+        finalArr[i] = arr[rotationIdx];
         i++;
-        rotateLeftIdx++;
+        rotationIdx++;
     }
 
-    //set rotateLeftIdx back to 0
-    rotateLeftIdx = 0;
-    while (rotateLeftIdx < d) {
-        newArr[i] = arr[rotateLeftIdx];
+    rotationIdx = 0;
+    while (rotationIdx < d) {
+        finalArr[i] = arr[rotationIdx];
         i++;
-        rotateLeftIdx++;
+        rotationIdx++;
     }
-    return newArr;
+    return finalArr;
 }
 
-console.log(rotateLeft(5, 2, [1, 2, 3, 4, 5]));
+console.log(rotateLeft(5, 4, [1, 2, 3, 4, 5]));
